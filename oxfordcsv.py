@@ -1,7 +1,18 @@
 #!/usr/bin/env python
 import StringIO
 import csv
+import getopt
 import sys
+
+English = False
+Oxford = ',and '
+
+# Handle command line arguments
+options, args = getopt.getopt(sys.argv[1:], 'E')
+for opt, val in options:
+    if opt == '-E':
+        English = True
+        Oxford = ', and '
 
 # Read text or a file from sdtin
 csv_text = ''.join(sys.stdin)
@@ -15,5 +26,5 @@ csv_reader = csv.reader(f, delimiter=',', quotechar='|')
 for row in csv_reader:
     line = ','.join(row)
     bits = line.rsplit(',', 1)
-    line = ',and '.join(bits)
+    line = Oxford.join(bits)
     print line
