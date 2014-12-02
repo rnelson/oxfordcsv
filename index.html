@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>OxfordCSV by rnelson</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/rnelson/oxfordcsv">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>OxfordCSV</h1>
+            <h2>Oxfordize your CSV files</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/rnelson/oxfordcsv/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/rnelson/oxfordcsv/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="oxfordcsv" class="anchor" href="#oxfordcsv" aria-hidden="true"><span class="octicon octicon-link"></span></a>oxfordcsv</h1>
+
+<h2>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p>Why use plain old CSV when you can use <a href="https://twitter.com/zapjackson/status/530941076492648448">Oxford CSV</a>?</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>To use <em>oxfordcsv</em>, simple pipe CSV data into it: <code>oxfordcsv.py &lt;infile.csv</code></p>
+
+<pre><code>$ cat sample.csv
+id,name,address,city,state
+1,Alice,213 Elk St.,New York,NY
+2,Bob,84924 1st Ave.,Boulder,CO
+3,Cheryl,99376 Apple Pkwy. Apt. #1632,Los Angeles,CA
+4,Dean,153 8th St. So.,Houston,TX
+$ oxfordcsv.py &lt; sample.csv &gt; oxford.csv
+$ cat oxford.csv
+id,name,address,city,and state
+1,Alice,213 Elk St.,New York,and NY
+2,Bob,84924 1st Ave.,Boulder,and CO
+3,Cheryl,99376 Apple Pkwy. Apt. #1632,Los Angeles,and CA
+4,Dean,153 8th St. So.,Houston,and TX
+$
+</code></pre>
+
+<p>For those of you who want stricter adherence to the rules of the English 
+language, the <code>-E</code> argument will cause a space to be added between the comma 
+and the and:</p>
+
+<pre><code>$ oxfordcsv.py -E &lt; sample.csv
+id,name,address,city, and state
+1,Alice,213 Elk St.,New York, and NY
+2,Bob,84924 1st Ave.,Boulder, and CO
+3,Cheryl,99376 Apple Pkwy. Apt. #1632,Los Angeles, and CA
+4,Dean,153 8th St. So.,Houston, and TX
+</code></pre>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="https://github.com/rnelson/oxfordcsv/blob/master/LICENSE">MIT</a></p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/rnelson">rnelson</a> can be found on <a href="https://github.com/rnelson/oxfordcsv">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
