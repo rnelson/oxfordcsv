@@ -2,7 +2,7 @@
 
 ## About
 
-Why use plain old CSV when you can use [Oxford CSV](https://twitter.com/zapjackson/status/530941076492648448)?
+Why use plain old CSV when you can use [Oxford CSV][tweet]?
 
 ## Usage
 
@@ -25,8 +25,9 @@ id,name,address,city,and state
 $
 ```
 
-For those of you who want stricter adherence to the rules of the English language, the `-E` argument will cause a space 
-to be added between the comma and the and:
+For those of you who want stricter adherence to the rules of the English 
+language, the `-E` argument will cause a space to be added between the comma 
+and the and:
 
 ```
 $ oxfordcsv.py -E < sample.csv
@@ -40,3 +41,7 @@ id,name,address,city, and state
 ## License
 
 [MIT](https://github.com/rnelson/oxfordcsv/blob/master/LICENSE)
+
+
+
+[tweet]: https://twitter.com/zapjackson/status/530941076492648448
