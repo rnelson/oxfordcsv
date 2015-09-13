@@ -12,7 +12,7 @@ options, args = getopt.getopt(sys.argv[1:], 'E')
 for opt, val in options:
     if opt == '-E':
         English = True
-        Oxford = ', and '
+        Oxford = ', and'
 
 # Read text or a file from sdtin
 csv_text = ''.join(sys.stdin)
@@ -24,7 +24,11 @@ csv_reader = csv.reader(f, delimiter=',', quotechar='|')
 
 # Oxfordize!
 for row in csv_reader:
-    line = ','.join(row)
+    if English:
+        line = ', '.join(row)
+    else:
+        line = ','.join(row)
+
     bits = line.rsplit(',', 1)
     line = Oxford.join(bits)
     print line

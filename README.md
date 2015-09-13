@@ -26,16 +26,15 @@ $
 ```
 
 For those of you who want stricter adherence to the rules of the English 
-language, the `-E` argument will cause a space to be added between the comma 
-and the and:
+language, the `-E` argument will cause extra spaces to be added:
 
 ```
 $ oxfordcsv.py -E < sample.csv
-id,name,address,city, and state
-1,Alice,213 Elk St.,New York, and NY
-2,Bob,84924 1st Ave.,Boulder, and CO
-3,Cheryl,99376 Apple Pkwy. Apt. #1632,Los Angeles, and CA
-4,Dean,153 8th St. So.,Houston, and TX
+id, name, address, city, and state
+1, Alice, 213 Elk St., New York, and NY
+2, Bob, 84924 1st Ave., Boulder, and CO
+3, Cheryl, 99376 Apple Pkwy. Apt. #1632, Los Angeles, and CA
+4, Dean, 153 8th St. So., Houston, and TX
 ```
 
 ## License
