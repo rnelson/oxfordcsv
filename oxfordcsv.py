@@ -1,5 +1,10 @@
 #!/usr/bin/env python
-import StringIO
+from __future__ import print_function
+import six
+if six.PY2:
+    from StringIO import StringIO    
+elif six.PY3:
+    from six import StringIO
 import csv
 import getopt
 import sys
@@ -18,7 +23,7 @@ for opt, val in options:
 csv_text = ''.join(sys.stdin)
 
 # Load that text into a StringIO object, which csv.reader() handles
-f = StringIO.StringIO(csv_text)
+f = StringIO(csv_text)
 f.seek(0)
 csv_reader = csv.reader(f, delimiter=',', quotechar='|')
 
@@ -31,4 +36,4 @@ for row in csv_reader:
 
     bits = line.rsplit(',', 1)
     line = Oxford.join(bits)
-    print line
+    print(line)

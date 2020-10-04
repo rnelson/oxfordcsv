@@ -4,6 +4,8 @@
 
 Why use plain old CSV when you can use [Oxford CSV][tweet]?
 
+Compatible with both Python 2 and Python 3. Tested on 2.7.18 and 3.6.8. Requires the [six][six] library.
+
 ## Usage
 
 To use _oxfordcsv_, simple pipe CSV data into it: `oxfordcsv.py <infile.csv`
@@ -25,8 +27,14 @@ id,name,address,city,and state
 $
 ```
 
-For those of you who want stricter adherence to the rules of the English 
-language, the `-E` argument will cause extra spaces to be added:
+For those on PowerShell, you can run it like this:
+
+```
+PS D:\Projects\oxfordcsv> Get-Content .\sample.csv | python.exe .\oxfordcsv.py | Out-File oxford.csv
+```
+
+Do you want stricter adherence to the rules of the English language? The `-E` 
+argument will cause extra spaces to be added:
 
 ```
 $ oxfordcsv.py -E < sample.csv
@@ -44,3 +52,4 @@ id, name, address, city, and state
 
 
 [tweet]: https://twitter.com/zapjackson/status/530941076492648448
+[six]: https://six.readthedocs.io/
