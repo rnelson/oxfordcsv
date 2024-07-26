@@ -63,7 +63,7 @@
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>To use <em>oxfordcsv</em>, simple pipe CSV data into it: <code>oxfordcsv.py &lt;infile.csv</code></p>
+<p>To use <em>oxfordcsv</em>, simple pipe CSV data into it: <code>python3 oxfordcsv.py &lt; infile.csv</code></p>
 
 <pre><code>$ cat sample.csv
 id,name,address,city,state
@@ -71,7 +71,7 @@ id,name,address,city,state
 2,Bob,84924 1st Ave.,Boulder,CO
 3,Cheryl,99376 Apple Pkwy. Apt. #1632,Los Angeles,CA
 4,Dean,153 8th St. So.,Houston,TX
-$ oxfordcsv.py &lt; sample.csv &gt; oxford.csv
+$ python3 oxfordcsv.py &lt; sample.csv &gt; oxford.csv
 $ cat oxford.csv
 id,name,address,city,and state
 1,Alice,213 Elk St.,New York,and NY
@@ -85,7 +85,7 @@ $
 language, the <code>-E</code> argument will cause a space to be added between the comma 
 and the and:</p>
 
-<pre><code>$ oxfordcsv.py -E &lt; sample.csv
+<pre><code>$ python3 oxfordcsv.py -E &lt; sample.csv
 id,name,address,city, and state
 1,Alice,213 Elk St.,New York, and NY
 2,Bob,84924 1st Ave.,Boulder, and CO
@@ -112,17 +112,5 @@ id,name,address,city, and state
       </footer>
 
     </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-57251962-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
   </body>
 </html>
