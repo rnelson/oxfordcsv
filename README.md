@@ -4,11 +4,11 @@
 
 Why use plain old CSV when you can use [Oxford CSV][tweet]?
 
-Compatible with both Python 2 and Python 3. Tested on 2.7.18 and 3.6.8. Requires the [six][six] library.
+Compatible with both Python 3. Tested on 3.9.19.
 
 ## Usage
 
-To use _oxfordcsv_, simple pipe CSV data into it: `oxfordcsv.py <infile.csv`
+To use _oxfordcsv_, simple pipe CSV data into it: `python3 oxfordcsv.py < infile.csv`
 
 ```
 $ cat sample.csv
@@ -17,7 +17,7 @@ id,name,address,city,state
 2,Bob,84924 1st Ave.,Boulder,CO
 3,Cheryl,99376 Apple Pkwy. Apt. #1632,Los Angeles,CA
 4,Dean,153 8th St. So.,Houston,TX
-$ oxfordcsv.py < sample.csv > oxford.csv
+$ python3 oxfordcsv.py < sample.csv > oxford.csv
 $ cat oxford.csv
 id,name,address,city,and state
 1,Alice,213 Elk St.,New York,and NY
@@ -37,7 +37,7 @@ Do you want stricter adherence to the rules of the English language? The `-E`
 argument will cause extra spaces to be added:
 
 ```
-$ oxfordcsv.py -E < sample.csv
+$ python3 oxfordcsv.py -E < sample.csv
 id, name, address, city, and state
 1, Alice, 213 Elk St., New York, and NY
 2, Bob, 84924 1st Ave., Boulder, and CO
